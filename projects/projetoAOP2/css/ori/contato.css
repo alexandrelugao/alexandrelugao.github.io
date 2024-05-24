@@ -1,0 +1,99 @@
+.main {
+    padding: 20px;
+    /* display: grid; */
+    /* grid: auto-flow / 3fr; */
+    /* grid-template-areas:
+    "section aside"; */
+    box-sizing: border-box;
+    /* padding: 20px; */
+    /* grid-area: main; */
+    /* background-color: red; */
+}
+.section {
+    /* background-color: blueviolet; */
+    /* width: 100%; */
+
+    display: grid;
+    /* flex-direction: row; */
+    
+    grid-template-areas: "contato form";
+    grid: auto-flow / 1fr 1fr;
+    /* gap: 50px; */
+    /* padding: 10px 50px ; */
+
+
+}
+/* .contato-contatos {
+} */
+
+.contato-icon {
+    width: 25px;
+    height: auto;
+
+    grid-area: icon;
+
+    /* background-color: aqua; */
+}
+.g-cartao-contato {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    /* grid-template-areas:
+        "titulo ." 
+        "icon contato"
+        "icon contato"
+    ;
+    justify-content: start; */
+    margin: 0 0 10px 0;
+    padding: 20px;
+    
+}
+.contato {
+    display: inline;
+    /* grid-area: contato; */
+    margin: 0;
+    /* background-color: red; */
+    
+}
+.contato-titulo {
+    /* grid-area: titulo; */
+    margin: 0;
+    /* background-color: blue; */
+}
+.div-icon-text {
+    display: flex;
+    gap: 0 10px;
+}
+.contato-contatos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 10px; */
+
+    /* background-color: yellowgreen; */
+}
+
+.contato-form {
+    /* display: flex;
+    flex-grow: 2;
+    width: 100%;
+    justify-content: center; */
+    padding: 10px;
+    width: 85%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+
+    height: fit-content;
+
+    /* background-color: blueviolet; */
+
+}
+.form-label {
+    display: block;    
+}
+.form-input {
+    width: 80%;
+    margin: 0 0 20px 0;
+
+}

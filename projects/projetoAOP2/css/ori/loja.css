@@ -1,0 +1,27 @@
+.loja {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+    gap: 15px;
+}
+
+.g-cartao-loja {
+    grid-template-areas: 
+        "capa titulo"
+        "capa descricao"
+        ". lojas"
+    ;
+}
+
+.loja-links {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    grid-area: lojas;
+    /* background-color: red; */
+}
+.loja-logo {
+    width: 75px;
+    /* height: auto; */
+    /* background-color: red; */
+}

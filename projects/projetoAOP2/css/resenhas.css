@@ -1,0 +1,15 @@
+.resenhas {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 15px;
+}
+
+.g-cartao-resenhas {
+    grid-template-areas: 
+        "capa titulo"
+        "capa descricao"
+        ". descricao"
+        /* "capa . botao" */
+    ;
+}

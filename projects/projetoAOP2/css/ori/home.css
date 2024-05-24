@@ -1,0 +1,40 @@
+.home-tema {
+    display: flex;
+    flex-direction: row;
+    /* justify-items: stretch; */
+    /* flex-wrap: wrap; */
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.tema {
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+    /* justify-content: space-around; */
+    /* background-color: red; */
+    /* border: 1px solid black; */
+    /* margin: 0 3px; */
+    /* background-color: black; */
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+    /* background-image: url("../img/logo.png"); */
+}
+/* .home-tema:hover {
+    opacity: .1;
+} */
+
+
+.home-resenhas:hover {
+    opacity: 0.8;
+}
+.home-leituras:hover {
+    opacity: 0.8;
+}
+.home-loja:hover {
+    opacity: 0.8;
+}
+.home-contato:hover {
+    opacity: 0.8;
+}
+
+

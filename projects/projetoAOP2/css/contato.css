@@ -1,0 +1,64 @@
+.main {
+    padding: 20px;
+
+    box-sizing: border-box;
+
+}
+.section {
+    display: grid;
+    
+    grid-template-areas: "contato form";
+    grid: auto-flow / 1fr 1fr;
+}
+
+.contato-icon {
+    width: 25px;
+    height: auto;
+
+    grid-area: icon;
+
+}
+.g-cartao-contato {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 0 10px 0;
+    padding: 20px;
+    
+}
+.contato {
+    display: inline;
+    margin: 0;    
+}
+.contato-titulo {
+    margin: 0;
+}
+.div-icon-text {
+    display: flex;
+    gap: 0 10px;
+}
+.contato-contatos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contato-form {
+    padding: 10px;
+    width: 85%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+
+    height: fit-content;
+
+}
+.form-label {
+    display: block;    
+}
+.form-input {
+    width: 80%;
+    margin: 0 0 20px 0;
+
+}
