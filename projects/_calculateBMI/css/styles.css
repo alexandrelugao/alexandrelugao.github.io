@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    list-style: none;
+    border: 0;
+    text-decoration: none;
+}
+:root {
+    --primary-color: #1e1a1d;
+    --secondary-color: #ffb30fef;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    max-width: 460px;
+    margin: 60px auto 15px auto;
+    padding: 20px;
+    border-radius: 5px;
+
+    background-color: var(--secondary-color);
+}
+
+.footer {
+    max-width: 460px;
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    
+    font-size: 12px;
+}
+
+/* -=-=-=-=-=-=-=-=- */
+
+.container__form {
+    border: 1px solid #1e1a1d42;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+
+    font-size: 18px;
+}
+.form__row {
+    width: 100%;
+    margin: 3px;
+
+    display: flex;
+    justify-content: space-between;
+    
+}
+.form__input {
+    font-size: 18px;
+    padding: 2px 5px;
+
+    margin-left: 3px;
+    border-radius: 3px;
+
+    width: 40%;
+}
+.form__input:focus {
+    outline: none;
+}
+
+.form__row .btn {
+    width: auto;  /* overide .form__input width */
+    padding: 6px;
+
+    color: rgb(226, 226, 226);
+    background-color: #241f23;
+    border-radius: 3px;
+
+}
+.form__row .btn:hover {
+    background-color: #000;
+}
+
+.form__row--end {
+    display: flex;
+    justify-content: end;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.table-1 {
+    width: 75%;
+    margin: 15px auto;
+    text-align: center;
+
+}
+.table-1 th {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    padding: 2px;
+}
+.table-1 td {
+    background-color: #ffffff69;
+    padding: 2px;
+}
+.table-1 tr:last-child > td {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+.result {
+    margin: 20px auto;
+    text-align: center;
+    width: 90%;
+}
+.result > h2 {
+    margin-bottom: 10px;
+}

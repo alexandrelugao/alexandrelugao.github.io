@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    list-style: none;
+    border: 0;
+    text-decoration: none;
+}
+:root {
+    --primary-color: #1e1a1d;
+    --secondary-color: #ffb30fef;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    max-width: 460px;
+    margin: 60px auto 15px auto;
+    padding: 20px;
+    border-radius: 5px;
+
+    background-color: var(--secondary-color);
+}
+
+.footer {
+    max-width: 460px;
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    
+    font-size: 12px;
+}
+
+/* -=-=-=-=-=-=-=-=- */
+.container__h1 {
+    margin-bottom: 20px;
+}
+
+/* -=-=-=-=-=-=-=-=- */
+/* TO DO LIST */
+
+.form-task {
+    width: fit-content;
+    margin: 20px auto;
+
+    /* background-color: rebeccapurple; */
+}
+.form-task > * ~ * {
+    margin-left: 5px;
+
+    /* background-color: aqua; */
+}
+
+
+.new-task-input {
+    font-size: 16px;
+    
+    outline: none;
+    padding: 3px 5px;
+    border-radius: 5px;
+
+}
+.new-task-lbl {
+    font-size: 16px;
+    font-variant: small-caps;
+
+}
+.new-task-btn {
+    font-size: 16px;
+    font-variant: small-caps;
+    outline: none;
+
+    padding: 3px 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px #00000011;
+
+}
+.new-task-btn:active {
+    transform: translateY(1px);
+}
+
+
+.tasks-ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.tasks-li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    /* background-color: red; */
+}
+
+.task-txt {
+    width: 60%;
+    padding: 5px;
+    /* text-align: center; */
+
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    
+    /* display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 15px;
+    align-items: center; */
+}
+
+.del-task-btn {
+    /* content: "x"; */
+    font-size: 13px;
+    font-variant: small-caps;
+    font-weight: 800;
+    /* background-color: #00000011; */
+
+    background-color: transparent;
+
+    /* color: var(--primary-color);
+    background-color: var(--secondary-color);
+    width: 15px;
+    height: 15px; */
+
+    /* border-radius: 100%; */
+}
+.del-task-btn:active {
+    transform: translateY(2px);
+}

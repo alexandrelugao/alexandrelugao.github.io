@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    list-style: none;
+    border: 0;
+    text-decoration: none;
+}
+:root {
+    --primary-color: #1d1d1d;
+    --secondary-color: #ffb30fef;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    max-width: 460px;
+    margin: 60px auto 15px auto;
+    padding: 20px;
+    border-radius: 5px;
+
+    background-color: var(--secondary-color);
+}
+
+.footer {
+    max-width: 460px;
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    
+    font-size: 12px;
+}
+
+/* -=-=-=-=-=-=-=-=- */
+.container__h1 {
+    margin-bottom: 20px;
+}
+
+
+/* -=-=-=- Calculator  -=-=-=- */
+
+.calc-area {
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    width: 75%;
+    margin: auto;
+    padding: 10px;
+    
+    box-sizing: border-box;
+
+
+    background-color: var(--primary-color);
+}
+
+.display {
+    width: 100%;
+    font-size: 33px;
+    padding: 5px 10px;
+
+    border-radius: 5px;
+    text-align: right;
+    margin-bottom: 10px;
+
+    box-sizing: border-box;
+    outline: none;
+    caret-color: transparent;
+}
+
+.btn-area {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 5px;
+    justify-items: center;
+}
+/* .grid-symbol-h {
+    background-color: red;
+    grid-area: grid-symbol-h;
+
+    display: flex;
+    justify-content: space-between;
+}
+.grid-symbol-v {
+    background-color: green;
+    grid-area: grid-symbol-v;
+
+}
+.grid-numeric {
+    background-color: blue;
+    grid-area: grid-numeric;
+
+} */
+
+.btn {
+    height: 60px;
+    width: 60px;
+    color: #eee;
+
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    outline: none;
+    /* transition: 1s; */
+
+    /* transition: .5s background-color; */
+}
+.btn:active {
+    /* matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() ) */
+
+    transform: matrix(.96, 0, 0, .96, 0, 0);
+    background-color: #222222;
+}
+.btn-op {
+    color: var(--secondary-color);
+}
+.btn-clear {
+    color: var(--secondary-color);
+}
+
+.btn-bksp {
+    transform: scaleX(-1);
+    color: var(--secondary-color);
+}
+.btn-bksp:active {
+    transform: scaleX(-1) translateY(2px);
+}
+
+.btn-equal {
+    background-color: var(--secondary-color);
+    font-size: 35px;
+
+    height: auto;
+    border-radius: 5px;
+    grid-row: 5 / 7;
+    grid-column: 4;
+
+}
+.btn-equal:active {
+    background-color: #ffb30fd3;
+}
+
+/* .active {
+    transform: matrix(.96, 0, 0, .96, 0, 0);
+    background-color: #222222;
+}
+.bksp-active {
+    transform: matrix(-.96, 0, 0, .96, -1, 0);
+    background-color: #222222;
+}
+.equal-active {
+    background-color: #ffb30fd3;
+} */
