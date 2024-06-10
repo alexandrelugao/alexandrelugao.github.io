@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alexandre Lugão">
+    <title>AOP3 - Arquitetura Relacional de Dados</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>AOP3 - Arquitetura Relacional de Dados</h1>
+    <ul>
+        <li><a href="#menor_preco">Menor Preço</a></li>
+        <li><a href="#preco_medio">Preço Médio</a></li>
+        <li><a href="#tabela_posto">Coleta de cada posto</a></li>
+        <li><a href="#fotos">Fotos</a></li>
+    </ul>
+
+    <h2 id="menor_preco">Menor Preço</h2>
+    <section>
+    <table>
+        <caption>Menor Preço Coletado</caption>
+        <tr>
+            <th>POSTO</th>
+            <th>BAIRRO</th>
+            <th>COMBUSTÍVEL</th>
+            <th>MENOR PREÇO</th>
+            <th>DATA</th>
+        </tr>
+        <tr>
+            <td>Posto Bandeira</td>
+            <td>Aquidaban</td>
+            <td>Gasolina Comum</td>
+            <td>6.59</td>
+            <td>2024-05-18</td>
+        </tr>
+        <tr>
+            <td>Posto Bandeira</td>
+            <td>Aquidaban</td>
+            <td>Gasolina Aditivada</td>
+            <td>6.69</td>
+            <td>2024-05-18</td>
+        </tr>
+        <tr>
+            <td>Posto Brasil Cachoeiro</td>
+            <td>Aquidaban</td>
+            <td>Etanol</td>
+            <td>4.49</td>
+            <td>2024-05-18</td>
+        </tr>
+        <tr>
+            <td>Posto Senna</td>
+            <td>Gilberto Machado</td>
+            <td>Diesel</td>
+            <td>5.99</td>
+            <td>2024-05-28</td>
+        </tr>
+    </table>
+
+    <table>
+        <caption>Menor Preço no Bairro Paraíso</caption>
+        <tr>
+            <th>PostoNome</th>
+            <th>PostoBairro</th>
+            <th>CombTipo</th>
+            <th>TabPreco</th>
+            <th>TabData</th>
+        </tr>
+        <tr>
+            <td>Posto Club</td>
+            <td>Paraíso</td>
+            <td>Gasolina Comum</td>
+            <td>6.64</td>
+            <td>2024-05-28</td>
+        </tr>
+        <tr>
+            <td>Posto Club</td>
+            <td>Paraíso</td>
+            <td>Gasolina Aditivada</td>
+            <td>6.75</td>
+            <td>2024-05-28</td>
+        </tr>
+        <tr>
+            <td>Posto Club</td>
+            <td>Paraíso</td>
+            <td>Diesel</td>
+            <td>5.99</td>
+            <td>2024-05-28</td>
+        </tr>
+        <tr>
+            <td>Posto Avenida</td>
+            <td>Paraíso</td>
+            <td>Etanol</td>
+            <td>4.55</td>
+            <td>2024-05-18</td>
+        </tr>
+    </table>
+    </section>
+
+
+
+    <h2 id="preco_medio">Preço Médio</h2>
+    <section>
+
+    <table>
+        <caption>Preço Médio de Cada Combustível em Cada Posto</caption>
+        <tr>
+            <th>Nome do Posto</th>
+            <th>Bairro</th>
+            <th>Combustível</th>
+            <th>Preço Médio</th>
+            <th>Qtd. de Coletas</th>
+        </tr>
+        <tr>
+            <td>Posto Brasil Cachoeiro</td>
+            <td>Aquidaban</td>
+            <td>Gasolina Comum</td>
+            <td>R$ 6.68</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Brasil Cachoeiro</td>
+            <td>Aquidaban</td>
+            <td>Gasolina Aditivada</td>
+            <td>R$ 6.98</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Brasil Cachoeiro</td>
+            <td>Aquidaban</td>
+            <td>Etanol</td>
+            <td>R$ 4.49</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Brasil Cachoeiro</td>
+            <td>Aquidaban</td>
+            <td>Diesel</td>
+            <td>R$ 6.29</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Bandeira</td>
+            <td>Aquidaban</td>
+            <td>Gasolina Comum</td>
+            <td>R$ 6.63</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Bandeira</td>
+            <td>Aquidaban</td>
+            <td>Gasolina Aditivada</td>
+            <td>R$ 6.77</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Bandeira</td>
+            <td>Aquidaban</td>
+            <td>Etanol</td>
+            <td>R$ 4.55</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Bandeira</td>
+            <td>Aquidaban</td>
+            <td>Diesel</td>
+            <td>-</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Cachoeiro</td>
+            <td>Abelardo Ferreira Machado</td>
+            <td>Gasolina Comum</td>
+            <td>R$ 6.63</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Cachoeiro</td>
+            <td>Abelardo Ferreira Machado</td>
+            <td>Gasolina Aditivada</td>
+            <td>R$ 6.77</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Cachoeiro</td>
+            <td>Abelardo Ferreira Machado</td>
+            <td>Etanol</td>
+            <td>R$ 4.59</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Cachoeiro</td>
+            <td>Abelardo Ferreira Machado</td>
+            <td>Diesel</td>
+            <td>R$ 6.19</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Senna</td>
+            <td>Gilberto Machado</td>
+            <td>Gasolina Comum</td>
+            <td>R$ 6.71</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Senna</td>
+            <td>Gilberto Machado</td>
+            <td>Gasolina Aditivada</td>
+            <td>R$ 6.96</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Senna</td>
+            <td>Gilberto Machado</td>
+            <td>Etanol</td>
+            <td>R$ 4.82</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Senna</td>
+            <td>Gilberto Machado</td>
+            <td>Diesel</td>
+            <td>R$ 6.14</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Club</td>
+            <td>Paraíso</td>
+            <td>Gasolina Comum</td>
+            <td>R$ 6.66</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Club</td>
+            <td>Paraíso</td>
+            <td>Gasolina Aditivada</td>
+            <td>R$ 6.77</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Club</td>
+            <td>Paraíso</td>
+            <td>Etanol</td>
+            <td>R$ 4.82</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Club</td>
+            <td>Paraíso</td>
+            <td>Diesel</td>
+            <td>R$ 6.14</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Avenida</td>
+            <td>Paraíso</td>
+            <td>Gasolina Comum</td>
+            <td>R$ 6.69</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Avenida</td>
+            <td>Paraíso</td>
+            <td>Gasolina Aditivada</td>
+            <td>R$ 6.89</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Avenida</td>
+            <td>Paraíso</td>
+            <td>Etanol</td>
+            <td>R$ 4.55</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Posto Avenida</td>
+            <td>Paraíso</td>
+            <td>Diesel</td>
+            <td>R$ 6.29</td>
+            <td>12</td>
+        </tr>
+    </table>
+    <div class="div1">
+    <table>
+        <caption>Preco Médio Geral</caption>
+        <tr>
+            <th>Combustível</td>
+            <th>Preço Médio Geral</th>
+        </tr>
+        <tr>
+            <td>Gasolina Comum</td>
+            <td>6.67</td>
+        </tr>
+        <tr>
+            <td>Gasolina Aditivada</td>
+            <td>6.86</td>
+        </tr>
+        <tr>
+            <td>Etanol</td>
+            <td>4.64</td>
+        </tr>
+        <tr>
+            <td>Diesel</td>
+            <td>6.21</td>
+        </tr>
+    </table>
+
+    <table>
+        <caption>Preço Médio no Bairro Paraíso</caption>
+        <tr>
+            <th>Combustível</th>
+            <th>Preço Médio No Bairro</th>
+        </tr>
+        <tr>
+            <td>Gasolina Comum</td>
+            <td>R$ 6.68</td>
+        </tr>
+        <tr>
+            <td>Gasolina Aditivada</td>
+            <td>R$ 6.83</td>
+        </tr>
+        <tr>
+            <td>Etanol</td>
+            <td>R$ 4.69</td>
+        </tr>
+        <tr>
+            <td>Diesel</td>
+            <td>R$ 6.22</td>
+        </tr>
+    </table>
+    </div>
+
+    </section>
+
+    
+    <h2 id="tabela_posto">Tabela de Preços por Posto</h2>
+    <section>
+        <table>
+        <caption>1 - POSTO BRASIL CACHOEIRO</caption>
+        <tr>
+            <th>Data</th>
+            <th>GASOLINA COMUM</th>
+            <th>GASOLINA ADITIVADA</th>
+            <th>ETANOL</th>
+            <th>DIESEL S10</th>
+        </tr>
+        <tr>
+            <td>18/05/2024</td>
+            <td>6,62</td>
+            <td>6,92</td>
+            <td>4,49</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>19/05/2024</td>
+            <td>6,62</td>
+            <td>6,92</td>
+            <td>4,49</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>20/05/2024</td>
+            <td>6,69</td>
+            <td>6,99</td>
+            <td>4,49</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>23/05/2024</td>
+            <td>6,69</td>
+            <td>6,99</td>
+            <td>4,49</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>25/05/2024</td>
+            <td>6,69</td>
+            <td>6,99</td>
+            <td>4,49</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>26/05/2024</td>
+            <td>6,69</td>
+            <td>6,99</td>
+            <td>4,49</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>28/05/2024</td>
+            <td>6,69</td>
+            <td>6,99</td>
+            <td>4,49</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>29/05/2024</td>
+            <td>6,69</td>
+            <td>6,99</td>
+            <td>4,49</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>31/05/2024</td>
+            <td>6,69</td>
+            <td>6,99</td>
+            <td>4,49</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>03/06/2024</td>
+            <td>6,69</td>
+            <td>6,99</td>
+            <td>4,49</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>05/06/2024</td>
+            <td>6,69</td>
+            <td>6,99</td>
+            <td>4,49</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>07/06/2024</td>
+            <td>6,69</td>
+            <td>6,99</td>
+            <td>4,49</td>
+            <td>6,29</td>
+        </tr>
+    </table>
+    <img src="./img/POSTO BRASIL CACHOEIRO.png" alt="">
+
+    
+    <table>
+        <caption>2 - POSTO BANDEIRA</caption>
+        <tr>
+            <th>Data</th>
+            <th>GASOLINA COMUM</th>
+            <th>GASOLINA ADITIVADA</th>
+            <th>ETANOL</th>
+            <th>DIESEL S10</th>
+        </tr>
+        <tr>
+            <td>18/05/2024</td>
+            <td>6,59</td>
+            <td>6,69</td>
+            <td>4,55</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>19/05/2024</td>
+            <td>6,59</td>
+            <td>6,69</td>
+            <td>4,55</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>20/05/2024</td>
+            <td>6,59</td>
+            <td>6,69</td>
+            <td>4,55</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>23/05/2024</td>
+            <td>6,64</td>
+            <td>6,79</td>
+            <td>4,55</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>25/05/2024</td>
+            <td>6,64</td>
+            <td>6,79</td>
+            <td>4,55</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>26/05/2024</td>
+            <td>6,64</td>
+            <td>6,79</td>
+            <td>4,55</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>28/05/2024</td>
+            <td>6,64</td>
+            <td>6,79</td>
+            <td>4,55</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>29/05/2024</td>
+            <td>6,64</td>
+            <td>6,79</td>
+            <td>4,55</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>31/05/2024</td>
+            <td>6,64</td>
+            <td>6,79</td>
+            <td>4,55</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>03/06/2024</td>
+            <td>6,64</td>
+            <td>6,79</td>
+            <td>4,55</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>05/06/2024</td>
+            <td>6,64</td>
+            <td>6,79</td>
+            <td>4,55</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>07/06/2024</td>
+            <td>6,64</td>
+            <td>6,79</td>
+            <td>4,55</td>
+            <td>-</td>
+        </tr>
+    </table>
+    <img src="./img/POSTO BANDEIRA.png" alt="">
+
+
+    <table>
+        <caption>3 - POSTO CACHOEIRO</caption>
+        <tr>
+            <th>Data</th>
+            <th>GASOLINA COMUM</th>
+            <th>GASOLINA ADITIVADA</th>
+            <th>ETANOL</th>
+            <th>DIESEL S10</th>
+        </tr>
+        <tr>
+            <td>18/05/2024</td>
+            <td>6,59</td>
+            <td>6,69</td>
+            <td>4,59</td>
+            <td>6,19</td>
+        </tr>
+        <tr>
+            <td>19/05/2024</td>
+            <td>6,59</td>
+            <td>6,69</td>
+            <td>4,59</td>
+            <td>6,19</td>
+        </tr>
+        <tr>
+            <td>20/05/2024</td>
+            <td>6,59</td>
+            <td>6,69</td>
+            <td>4,59</td>
+            <td>6,19</td>
+        </tr>
+        <tr>
+            <td>23/05/2024</td>
+            <td>6,64</td>
+            <td>6,79</td>
+            <td>4,59</td>
+            <td>6,19</td>
+        </tr>
+        <tr>
+            <td>25/05/2024</td>
+            <td>6,64</td>
+            <td>6,79</td>
+            <td>4,59</td>
+            <td>6,19</td>
+        </tr>
+        <tr>
+            <td>26/05/2024</td>
+            <td>6,64</td>
+            <td>6,79</td>
+            <td>4,59</td>
+            <td>6,19</td>
+        </tr>
+        <tr>
+            <td>28/05/2024</td>
+            <td>6,64</td>
+            <td>6,79</td>
+            <td>4,59</td>
+            <td>6,19</td>
+        </tr>
+        <tr>
+            <td>29/05/2024</td>
+            <td>6,64</td>
+            <td>6,79</td>
+            <td>4,59</td>
+            <td>6,19</td>
+        </tr>
+        <tr>
+            <td>31/05/2024</td>
+            <td>6,64</td>
+            <td>6,79</td>
+            <td>4,59</td>
+            <td>6,19</td>
+        </tr>
+        <tr>
+            <td>03/06/2024</td>
+            <td>6,64</td>
+            <td>6,79</td>
+            <td>4,59</td>
+            <td>6,19</td>
+        </tr>
+        <tr>
+            <td>05/06/2024</td>
+            <td>6,64</td>
+            <td>6,79</td>
+            <td>4,59</td>
+            <td>6,19</td>
+        </tr>
+        <tr>
+            <td>07/06/2024</td>
+            <td>6,64</td>
+            <td>6,79</td>
+            <td>4,59</td>
+            <td>6,19</td>
+        </tr>
+    </table>
+    <img src="./img/POSTO CACHOEIRO.png" alt="">
+
+
+    <table>
+        <caption>4 - POSTO SENNA</caption>
+        <tr>
+            <th>Data</th>
+            <th>GASOLINA COMUM</th>
+            <th>GASOLINA ADITIVADA</th>
+            <th>ETANOL</th>
+            <th>DIESEL S10</th>
+        </tr>
+        <tr>
+            <td>18/05/2024</td>
+            <td>6,74</td>
+            <td>6,99</td>
+            <td>4,82</td>
+            <td>6,35</td>
+        </tr>
+        <tr>
+            <td>19/05/2024</td>
+            <td>6,74</td>
+            <td>6,99</td>
+            <td>4,82</td>
+            <td>6,35</td>
+        </tr>
+        <tr>
+            <td>20/05/2024</td>
+            <td>6,74</td>
+            <td>6,99</td>
+            <td>4,82</td>
+            <td>6,35</td>
+        </tr>
+        <tr>
+            <td>23/05/2024</td>
+            <td>6,74</td>
+            <td>6,99</td>
+            <td>4,82</td>
+            <td>6,35</td>
+        </tr>
+        <tr>
+            <td>25/05/2024</td>
+            <td>6,74</td>
+            <td>6,99</td>
+            <td>4,82</td>
+            <td>6,35</td>
+        </tr>
+        <tr>
+            <td>26/05/2024</td>
+            <td>6,69</td>
+            <td>6,94</td>
+            <td>4,82</td>
+            <td>5,99</td>
+        </tr>
+        <tr>
+            <td>28/05/2024</td>
+            <td>6,69</td>
+            <td>6,94</td>
+            <td>4,82</td>
+            <td>5,99</td>
+        </tr>
+        <tr>
+            <td>29/05/2024</td>
+            <td>6,69</td>
+            <td>6,94</td>
+            <td>4,82</td>
+            <td>5,99</td>
+        </tr>
+        <tr>
+            <td>31/05/2024</td>
+            <td>6,69</td>
+            <td>6,94</td>
+            <td>4,82</td>
+            <td>5,99</td>
+        </tr>
+        <tr>
+            <td>03/06/2024</td>
+            <td>6,69</td>
+            <td>6,94</td>
+            <td>4,82</td>
+            <td>5,99</td>
+        </tr>
+        <tr>
+            <td>05/06/2024</td>
+            <td>6,69</td>
+            <td>6,94</td>
+            <td>4,82</td>
+            <td>5,99</td>
+        </tr>
+        <tr>
+            <td>07/06/2024</td>
+            <td>6,69</td>
+            <td>6,94</td>
+            <td>4,82</td>
+            <td>5,99</td>
+        </tr>
+    </table>
+
+    <img src="./img/POSTO SENNA.png" alt="">
+
+
+    <table>
+        <caption>5 - POSTO CLUB</caption>
+        <tr>
+            <th>Data</th>
+            <th>GASOLINA COMUM</th>
+            <th>GASOLINA ADITIVADA</th>
+            <th>ETANOL</th>
+            <th>DIESEL S10</th>
+        </tr>
+        <tr>
+            <td>18/05/2024</td>
+            <td>6,69</td>
+            <td>6,8</td>
+            <td>4,82</td>
+            <td>6,35</td>
+        </tr>
+        <tr>
+            <td>19/05/2024</td>
+            <td>6,69</td>
+            <td>6,8</td>
+            <td>4,82</td>
+            <td>6,35</td>
+        </tr>
+        <tr>
+            <td>20/05/2024</td>
+            <td>6,69</td>
+            <td>6,8</td>
+            <td>4,82</td>
+            <td>6,35</td>
+        </tr>
+        <tr>
+            <td>23/05/2024</td>
+            <td>6,69</td>
+            <td>6,8</td>
+            <td>4,82</td>
+            <td>6,35</td>
+        </tr>
+        <tr>
+            <td>25/05/2024</td>
+            <td>6,69</td>
+            <td>6,8</td>
+            <td>4,82</td>
+            <td>6,35</td>
+        </tr>
+        <tr>
+            <td>26/05/2024</td>
+            <td>6,64</td>
+            <td>6,75</td>
+            <td>4,82</td>
+            <td>5,99</td>
+        </tr>
+        <tr>
+            <td>28/05/2024</td>
+            <td>6,64</td>
+            <td>6,75</td>
+            <td>4,82</td>
+            <td>5,99</td>
+        </tr>
+        <tr>
+            <td>29/05/2024</td>
+            <td>6,64</td>
+            <td>6,75</td>
+            <td>4,82</td>
+            <td>5,99</td>
+        </tr>
+        <tr>
+            <td>31/05/2024</td>
+            <td>6,64</td>
+            <td>6,75</td>
+            <td>4,82</td>
+            <td>5,99</td>
+        </tr>
+        <tr>
+            <td>03/06/2024</td>
+            <td>6,64</td>
+            <td>6,75</td>
+            <td>4,82</td>
+            <td>5,99</td>
+        </tr>
+        <tr>
+            <td>05/06/2024</td>
+            <td>6,64</td>
+            <td>6,75</td>
+            <td>4,82</td>
+            <td>5,99</td>
+        </tr>
+        <tr>
+            <td>07/06/2024</td>
+            <td>6,64</td>
+            <td>6,75</td>
+            <td>4,82</td>
+            <td>5,99</td>
+        </tr>
+    </table>
+    <img src="./img/POSTO CLUB.png" alt="">
+
+
+    <table>
+        <caption>6 - POSTO AVENIDA</caption>
+        <tr>
+            <th>Data</th>
+            <th>GASOLINA COMUM</th>
+            <th>GASOLINA ADITIVADA</th>
+            <th>ETANOL</th>
+            <th>DIESEL S10</th>
+        </tr>
+        <tr>
+            <td>18/05/2024</td>
+            <td>6,69</td>
+            <td>6,89</td>
+            <td>4,55</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>19/05/2024</td>
+            <td>6,69</td>
+            <td>6,89</td>
+            <td>4,55</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>20/05/2024</td>
+            <td>6,69</td>
+            <td>6,89</td>
+            <td>4,55</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>23/05/2024</td>
+            <td>6,69</td>
+            <td>6,89</td>
+            <td>4,55</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>25/05/2024</td>
+            <td>6,69</td>
+            <td>6,89</td>
+            <td>4,55</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>26/05/2024</td>
+            <td>6,69</td>
+            <td>6,89</td>
+            <td>4,55</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>28/05/2024</td>
+            <td>6,69</td>
+            <td>6,89</td>
+            <td>4,55</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>29/05/2024</td>
+            <td>6,69</td>
+            <td>6,89</td>
+            <td>4,55</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>31/05/2024</td>
+            <td>6,69</td>
+            <td>6,89</td>
+            <td>4,55</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>03/06/2024</td>
+            <td>6,69</td>
+            <td>6,89</td>
+            <td>4,55</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>05/06/2024</td>
+            <td>6,69</td>
+            <td>6,89</td>
+            <td>4,55</td>
+            <td>6,29</td>
+        </tr>
+        <tr>
+            <td>07/06/2024</td>
+            <td>6,69</td>
+            <td>6,89</td>
+            <td>4,55</td>
+            <td>6,29</td>
+        </tr>
+    </table>
+    <img src="./img/POSTO AVENIDA.png" alt="">
+    </section>
+
+    <h2 id="fotos">Fotos</h2>
+    <div class="c-fotos">
+        <img src="./img/fotos/IMG_20240518_134755.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240518_202906.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240518_203637.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240518_204050.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240518_204259.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240519_210730.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240519_220947.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240520_214602.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240523_223838.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240523_224308.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240524_224746.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240526_211333.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240526_211724.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240526_212609.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240526_212900.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240526_212939.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240528_213136.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240528_213321.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240529_213631.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240529_214154.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240529_214346.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240531_212245.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240531_212750.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240531_212931.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240603_204748.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240603_204844.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240603_205156.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240603_210218.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240603_210403.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240605_210233.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240605_210524.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240605_210620.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240607_194919.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240607_195956.jpeg" alt="">
+        <img src="./img/fotos/IMG_20240609_211209.jpeg" alt="">
+
+
+
+
+
+
+
+    </div>
+
+</body>
+</html>

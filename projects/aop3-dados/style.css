@@ -1,0 +1,42 @@
+
+section {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 5px;
+    align-items: flex-start;
+    
+}
+
+th {
+    font-weight:bold;
+}
+table, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 0 5px;
+
+}
+
+.div1 {
+    display: flex;
+    gap: 75px;
+    flex-direction: column;
+    align-content: center;
+    margin: auto;
+    /* border: 1px solid black; */
+}
+
+.c-fotos > img {
+    width: 300px;
+}
+.c-fotos {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+}
